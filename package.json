@@ -1,0 +1,23 @@
+{
+  "name": "ivf-success-calculator",
+  "version": "1.0.0",
+  "description": "IVF Success Calculator based on CDC formulas",
+  "scripts": {
+    "start": "npm run start:backend",
+    "start:backend": "cd backend && npm run start:dev",
+    "start:frontend": "cd frontend && npm run start",
+    "dev": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "install:all": "npm install && npm run install:backend && npm run install:frontend",
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:backend": "cd backend && npm run test",
+    "test:frontend": "cd frontend && npm run test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
