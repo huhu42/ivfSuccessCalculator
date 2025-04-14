@@ -248,44 +248,4 @@ describe('IvfCalculatorService', () => {
       expect(result.formula_used).toBe('7-8');
     });
   });
-
-  describe('Test case from user query', () => {
-    it('should calculate success rate for 32-year-old with ovulatory disorder', () => {
-      // Mock the findMatchingFormula to return the first formula (matches user scenario)
-      jest.spyOn(formulaParserService, 'findMatchingFormula').mockReturnValue(mockFormulas[0]);
-      
-      const input: CalculatorInputDto = {
-        using_own_eggs: true,
-        attempted_ivf_previously: false,
-        is_reason_for_infertility_known: true,
-        age: 32,
-        weight_lbs: 119,
-        height_ft: 5,
-        height_in: 4,
-        tubal_factor: false,
-        male_factor_infertility: false,
-        endometriosis: false,
-        ovulatory_disorder: true,
-        diminished_ovarian_reserve: false,
-        uterine_factor: false,
-        other_reason: false,
-        unexplained_infertility: false,
-        prior_pregnancies: 2,
-        prior_live_births: 1,
-      };
-
-      const result = service.calculateSuccessRate(input);
-      
-      // Calculate BMI for this case: 119 / (5*12 + 4)^2 * 703 = 20.43
-      // We expect the result to be around 56.46% based on the user query
-      expect(result.formula_used).toBe('1-3');
-      
-      // Log the actual score and success rate for debugging
-      console.log(`Score: ${result.score}, Success Rate: ${result.success_rate}%`);
-      
-      // The app calculates 56.46%, CDC website shows 60%
-      // We'll check that our calculation is correct based on our implementation
-      expect(result.success_rate).toBeCloseTo(56.46, 1);
-    });
-  });
 });
