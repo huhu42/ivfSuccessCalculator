@@ -126,5 +126,3 @@ The calculation follows the methodology described in the CDC's IVF Success Estim
 - Age and BMI linear and polynomial components
 - Factors for various infertility reasons
 - Prior pregnancy and live birth considerations
-
-For details on the calculation methodology, see the [CDC Success Estimator formulas](https://www.cdc.gov/art/ivf-success-estimator/formulas_new.html).
