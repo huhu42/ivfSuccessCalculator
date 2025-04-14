@@ -1,0 +1,35 @@
+export interface IvfFormula {
+  param_using_own_eggs: boolean;
+  param_attempted_ivf_previously: boolean | 'N/A';
+  param_is_reason_for_infertility_known: boolean;
+  cdc_formula: string;
+  formula_intercept: number;
+  formula_age_linear_coefficient: number;
+  formula_age_power_coefficient: number;
+  formula_age_power_factor: number;
+  formula_bmi_linear_coefficient: number;
+  formula_bmi_power_coefficient: number;
+  formula_bmi_power_factor: number;
+  formula_tubal_factor_true_value: number;
+  formula_tubal_factor_false_value: number;
+  formula_male_factor_infertility_true_value: number;
+  formula_male_factor_infertility_false_value: number;
+  formula_endometriosis_true_value: number;
+  formula_endometriosis_false_value: number;
+  formula_ovulatory_disorder_true_value: number;
+  formula_ovulatory_disorder_false_value: number;
+  formula_diminished_ovarian_reserve_true_value: number;
+  formula_diminished_ovarian_reserve_false_value: number;
+  formula_uterine_factor_true_value: number;
+  formula_uterine_factor_false_value: number;
+  formula_other_reason_true_value: number;
+  formula_other_reason_false_value: number;
+  formula_unexplained_infertility_true_value: number;
+  formula_unexplained_infertility_false_value: number;
+  formula_prior_pregnancies_0_value: number;
+  formula_prior_pregnancies_1_value: number;
+  'formula_prior_pregnancies_2+_value': number;
+  formula_prior_live_births_0_value: number;
+  formula_prior_live_births_1_value: number;
+  'formula_prior_live_births_2+_value': number;
+}
